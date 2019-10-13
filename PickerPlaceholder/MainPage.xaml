@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:PickerPlaceholder"
+             mc:Ignorable="d"
+             x:Class="PickerPlaceholder.MainPage">
+
+    <StackLayout>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Picker Title="Title"
+                    x:Name="picker"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"/>
+
+            <Button Text="Picker:Set Index 1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="Index1Clicked"
+                    Grid.Row="1"
+                    Grid.Column="0"/>
+
+            <Button Text="Picker:Set Index -1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="Index2Clicked"
+                    Grid.Row="1"
+                    Grid.Column="1"/>
+
+            <local:PLPicker Placeholder="Placeholder"
+                            Title="Title"
+                            TitleColor="Blue"
+                            x:Name="plpicker"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"/>
+
+            <Button Text="PLPicker:Set Index 1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="PLPIndex1Clicked"
+                    Grid.Row="3"
+                    Grid.Column="0"/>
+
+            <Button Text="PLPicker:Set Index -1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    Clicked="PLPIndex2Clicked"
+                    Grid.Row="3"
+                    Grid.Column="1" />
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
